@@ -16,20 +16,41 @@ function App(){
   },[count])
 
   const fetchUser = async(count) =>{
-    const data = await axios.get(`https://jsonplaceholder.typicode.com/users/${count}`)
+    setLoading(true)
+    setError('')
+    try{
+      const data = await axios.get(`https://jsonplaceholder.typicode.com/users/${count}`)
+      setUser(data.data)
+    }catch(err){
+      setError('failed to fetch user data')
+    }finally{
+      setLoading(false)
+    }
   }
 
-  function handleIncrement(){
-    setCount(count+1)
-  }
-  function handleDecrement(){
-    setCount(count-1)
-  }
+
   return (
     <div>
-      <button onClick={handleIncrement}>+</button>
-      <h1>{count}</h1>
-      <button onClick={handleDecrement}>-</button>
+      <h1>Counter: {count}</h1>
+
+      <button onClick={() => setCount(count - 1)} disabled={count <= 1}>
+        Decrement
+      </button>
+      <button onClick={() => setCount(count + 1)} disabled={count >= 10}>
+        Increment
+      </button>
+
+      {loading && <p>Loading user information...</p>}
+      {error && <p>{error}</p>}
+      {user && (
+        <div>
+          <h2>User Information</h2>
+          <p><strong>Name:</strong> {user.name}</p>
+          <p><strong>Email:</strong> {user.email}</p>
+          <p><strong>Phone:</strong> {user.phone}</p>
+          <p><strong>Website:</strong> {user.website}</p>
+        </div>
+      )}
     </div>
   )
 }

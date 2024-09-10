@@ -77,8 +77,9 @@ button{
   font-size: 5rem;
   color: red;
   cursor: pointer;
+  margin: 10px;
 }
 
 p{
-  font-size: 10rem;
+  font-size: 2rem;
 }
