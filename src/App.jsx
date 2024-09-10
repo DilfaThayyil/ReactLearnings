@@ -2,15 +2,19 @@ import React,{useState} from "react";
 import ChildComponent from "./ChildComponent";
 
 function App(){
-  const [message,setMessage] = useState("")
-  const receiveMessage = (childData)=>{
-    setMessage(childData)
-  }
+  const [count,setCount] = useState(0)
 
+  function handleIncrement(){
+    setCount(count+1)
+  }
+  function handleDecrement(){
+    setCount(count-1)
+  }
   return (
     <div>
-      <h1>Message from Child:{message}</h1>
-      <ChildComponent sendMessage={receiveMessage}/>
+      <button onClick={handleIncrement}>+</button>
+      <h1>{count}</h1>
+      <button onClick={handleDecrement}>-</button>
     </div>
   )
 }
