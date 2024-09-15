@@ -4,13 +4,14 @@ import Counter from "./Counter";
 import fetchUser from "./useEffect";
 import Child from "./Child";
 import Parent from "./Parent";
+import Memo from "./Memo";
 
 function App(){
 
   
   return (
     <>
-    <Parent/>
+      <Memo/>
     </>
   )
   
