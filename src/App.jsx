@@ -1,4 +1,4 @@
-import React,{useEffect, useMemo, useState} from "react";
+import React,{useCallback, useEffect, useMemo, useState} from "react";
 import axios from 'axios'
 import Counter from "./Counter";
 import fetchUser from "./useEffect";
@@ -10,10 +10,10 @@ function App(){
   console.log('from parent')
   const [count,setCount]=useState(0)
   
-  const set = useMemo(()=>{
-    return {
-      a:1
-    }
+  const set = useCallback(()=>{
+    
+     a:1
+    
   },[])
   
   return (
