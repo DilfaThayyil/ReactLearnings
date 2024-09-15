@@ -3,15 +3,15 @@ import axios from 'axios'
 import Counter from "./Counter";
 import fetchUser from "./useEffect";
 import Child from "./Child";
-import Parent from "./Parent";
 
 function App(){
 
-  
+  const [data,setData] = useState('')
   return (
-    <>
-    <Parent/>
-    </>
+    <div>
+      <p>Data from Child : {data}</p>
+      <Child setData={setData}/>
+    </div>
   )
   
 }
