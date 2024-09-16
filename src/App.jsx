@@ -5,24 +5,32 @@ import fetchUser from "./useEffect";
 import Child from "./Child";
 import Parent from "./Parent";
 import Memo from "./Memo";
+import useContextParent from "./useContextParent";
 
 function App(){
-  console.log('from parent')
-  const [count,setCount]=useState(0)
+  // console.log('from parent')
+  // const [count,setCount]=useState(0)
   
-  const set = useCallback(()=>{
+  // const set = useCallback(()=>{
     
-     a:1
+  //    a:1
     
-  },[])
+  // },[])
   
+  // return (
+  //   <>
+  //   <button onClick={()=>setCount(count+1)}>+</button>
+  //   <p>{count}</p>
+  //     <Memo a={set}/>
+  //     <button onClick={()=>setSet(!set)}>{set?'True':'false'}</button>
+  //   </>
+  // )
+
   return (
-    <>
-    <button onClick={()=>setCount(count+1)}>+</button>
-    <p>{count}</p>
-      <Memo a={set}/>
-      <button onClick={()=>setSet(!set)}>{set?'True':'false'}</button>
-    </>
+  <>
+    <useContextParent/>
+  </>
+
   )
   
 }
