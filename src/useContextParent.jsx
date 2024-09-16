@@ -1,24 +1,16 @@
-import React, { createContext, useContext } from "react";
+import React from "react";
+import ChildContext from "./useContextChild";
+import MyContext from "./MyContext";
 
 
-const MyContext = createContext()
 
-const useContextParent = ()=>{
+const UseContextParent = ()=>{
     const contextvalue = "Hello from context"
     return (
         <MyContext.Provider value={contextvalue}>
-            <UseContextChild/>
+            <ChildContext/>
         </MyContext.Provider>
     )
 }
 
-const UseContextChild = ()=>{
-    const value = useContext(MyContext)
-    return (
-        <>
-        {value}
-        </>
-    )
-}
-
-export default useContextParent
+export default UseContextParent
