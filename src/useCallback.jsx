@@ -1,9 +1,23 @@
 import { useCallback, useState } from "react";
 
-const [count,setCount] = useState(0)
+const Counterr = ()=> {
+    const [count, setCount] = useState(0);
 
-const increment = useCallback(()=>{
-    setCount(count => count+1)
-},[count])
+    const Increment = useCallback(() => {
+        setCount(prevCount => prevCount + 1); 
+    }, []); 
 
-export default increment
+    const Decrement = useCallback(() => {
+        setCount(prevCount => prevCount - 1);
+    }, []);
+
+    return (
+        <div>
+            <button onClick={Increment}>+</button>
+            <h1>{count}</h1>
+            <button onClick={Decrement}>-</button>
+        </div>
+    );
+}
+
+export default Counterr;
