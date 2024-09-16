@@ -5,7 +5,7 @@ import fetchUser from "./useEffect";
 import Child from "./Child";
 import Parent from "./Parent";
 import Memo from "./Memo";
-import useContextParent from "./useContextParent";
+import UseContextParent from "./useContextParent";
 
 function App(){
   // console.log('from parent')
@@ -28,7 +28,7 @@ function App(){
 
   return (
   <>
-    <useContextParent/>
+    <UseContextParent/>
   </>
 
   )

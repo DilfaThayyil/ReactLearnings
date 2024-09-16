@@ -1,5 +1,4 @@
-import UseContextChild from "./useContextChild";
-import React, { createContext } from "react";
+import React, { createContext, useContext } from "react";
 
 
 const MyContext = createContext()
@@ -10,6 +9,15 @@ const useContextParent = ()=>{
         <MyContext.Provider value={contextvalue}>
             <UseContextChild/>
         </MyContext.Provider>
+    )
+}
+
+const UseContextChild = ()=>{
+    const value = useContext(MyContext)
+    return (
+        <>
+        {value}
+        </>
     )
 }
 
