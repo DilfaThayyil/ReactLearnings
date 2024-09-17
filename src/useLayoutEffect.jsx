@@ -1,7 +1,8 @@
 import { useLayoutEffect } from "react"
+import { useEffect } from "react"
 
 
-function useLE(){
+function UseLe(){
     useEffect(()=>{
         console.log("Message from useEffect")
     },[])
@@ -22,4 +23,4 @@ function useLE(){
 
 
 
-export default useLE
+export default UseLe
