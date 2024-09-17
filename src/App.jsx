@@ -7,17 +7,14 @@ import Parent from "./Parent";
 import Memo from "./Memo";
 import UseContextParent from "./useContextParent";
 import Counterr from "./useCallback";
+import ReducerFunction from "./useReducer";
 
 function App(){
-
-
   return (
   <>
-    <UseContextParent/>
+    <ReducerFunction/>
   </>
-
   )
   
 }
-
 export default App
