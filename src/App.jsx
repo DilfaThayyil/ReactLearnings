@@ -8,11 +8,12 @@ import Memo from "./Memo";
 import UseContextParent from "./useContextParent";
 import Counterr from "./useCallback";
 import ReducerFunction from "./useReducer";
+import useLE from "./useLayoutEffect";
 
 function App(){
   return (
   <>
-    <ReducerFunction/>
+    <useLE/>
   </>
   )
   
