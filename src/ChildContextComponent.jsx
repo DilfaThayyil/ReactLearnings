@@ -1,6 +1,5 @@
-// ChildComponent.js
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';  // Import the context
+import { AppContext } from './AppContext';  
 
 const ChildContCompon = () => {
   const { user, setUser } = useContext(AppContext);

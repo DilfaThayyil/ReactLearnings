@@ -1,7 +1,6 @@
-// ParentComponent.js
 import React from 'react';
-import { AppProvider } from './AppContext';  // Import the context provider
-import ChildContCompon from './ChildContextComponent'; // Import the child component
+import { AppProvider } from './AppContext';  
+import ChildContCompon from './ChildContextComponent'; 
 
 const ParentContCompon = () => {
   return (
