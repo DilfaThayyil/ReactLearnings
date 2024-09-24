@@ -1,12 +1,13 @@
-import React from 'react';
-import ParentContCompon from './ParentContextComponent';
+import ParentContCompon from "./ParentContextComponent";
 
-function App() {
+
+function App(){
   return (
-    <div className="App">
-      <ParentContCompon />
+    <div>
+      <ParentContCompon/>
     </div>
-  );
+  )
 }
 
-export default App;
+
+export default App

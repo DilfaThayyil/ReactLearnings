@@ -1,16 +1,16 @@
-import React from 'react';
-import { AppProvider } from './AppContext';  
-import ChildContCompon from './ChildContextComponent'; 
+import ChildContCompon from "./ChildContextComponent"
+import { AppProvider } from "./AppContext"
 
-const ParentContCompon = () => {
+const ParentContCompon = ()=>{
+
   return (
     <AppProvider>
       <div>
         <h1>Parent Component</h1>
-        <ChildContCompon />
+        <ChildContCompon/>
       </div>
     </AppProvider>
-  );
-};
+  )
+}
 
-export default ParentContCompon;
+export default ParentContCompon

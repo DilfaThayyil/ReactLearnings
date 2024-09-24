@@ -1,13 +1,15 @@
-import React, { createContext, useState } from 'react';
+const { createContext, useState } = require("react");
 
-export const AppContext = createContext();
 
-export const AppProvider = ({ children }) => {
-  const [user, setUser] = useState("Dilfa");
+export const AppContext = createContext()
+
+export const AppProvider = ({children})=>{
+
+  const [user,setUser] = useState('Dilfa')
 
   return (
-    <AppContext.Provider value={{ user, setUser }}>
+    <AppContext.Provider value={{user,setUser}}>
       {children}
     </AppContext.Provider>
-  );
-};
+  )
+} 
