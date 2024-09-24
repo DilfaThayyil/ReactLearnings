@@ -3,7 +3,7 @@ import { AppContext } from "./AppContext"
 
 
 const ChildContCompon = ()=>{
-  const [user,setUser] = useContext(AppContext)
+  const {user,setUser} = useContext(AppContext)
 
   return (
     <div>
