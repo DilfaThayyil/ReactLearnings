@@ -1,14 +1,12 @@
-import React,{useCallback, useEffect, useMemo, useState} from "react";
-import ThemeContext from "./MyContext";
-import UseLe from "./useLayoutEffect";
-import ParentComponent from "./ParentContextComponent";
+import React from 'react';
+import ParentContCompon from './ParentContextComponent';
 
-function App({children}){
+function App() {
   return (
-    <div>
-      <ParentComponent/>
+    <div className="App">
+      <ParentContCompon />
     </div>
-  )
-  
+  );
 }
-export default App
+
+export default App;
