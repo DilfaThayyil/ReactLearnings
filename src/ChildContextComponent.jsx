@@ -1,17 +1,17 @@
-import { useContext } from "react"
-import { AppContext } from "./AppContext"
+import {AppContext} from './AppContext'
+import {useContext} from 'react'
 
+const ChildComponent = ()=>{
 
-const ChildContCompon = ()=>{
   const {user,setUser} = useContext(AppContext)
 
   return (
     <div>
-      <h1>Child component</h1>
+      <h2>Child component</h2>
       <p>user : {user}</p>
-      <button onClick={()=>setUser('John doe')}>change User</button>
+      <button onClick={()=>setUser('Daisy jacob')}>Change User</button>
     </div>
   )
 }
 
-export default ChildContCompon
+export default ChildComponent

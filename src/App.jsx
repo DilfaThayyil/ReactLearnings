@@ -1,13 +1,12 @@
-import ParentContCompon from "./ParentContextComponent";
+import ParentComponent from "./ParentContextComponent";
 
 
 function App(){
-  return (
-    <div>
-      <ParentContCompon/>
-    </div>
-  )
+    return (
+        <div>
+            <ParentComponent/>
+        </div>
+    )
 }
-
 
 export default App
