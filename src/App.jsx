@@ -1,6 +1,6 @@
-import MemoParent from "./MemoParent"
+import MemoParent from "./MemoParent";
 
-function App(){
+const App = ()=>{
     return (
         <div>
             <MemoParent/>

@@ -1,13 +1,11 @@
-import React from 'react'
-
-function Memo({a}) {
+import React from "react"
+const MemoChild = React.memo(({name})=>{
   return (
     <div>
-      <h2>React.memo</h2>
-      <h3>From child : {a}</h3>
+      <h2>From Child</h2>
+      <h3>name : {name}</h3>
     </div>
   )
-}
+})
 
-const Memmmo=React.memo(Memo)
-export default Memmmo
+export default MemoChild

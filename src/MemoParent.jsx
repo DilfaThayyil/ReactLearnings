@@ -1,18 +1,19 @@
 import { useState } from "react";
-import Memmmo from "./MemoChild";
+import MemoChild from "./MemoChild";
+
 
 const MemoParent = ()=>{
+    const [name,setName] = useState('Parent')
     const [count,setCount] = useState(0)
-    const [name,setName] = useState('MEmoCHild')
 
     return (
         <div>
-            <Memmmo name={name}/>
-            <h2>Parent Memo :{name}</h2>
-            <button onClick={()=>setName(name==='MEmoCHild' ? 'MEmoPArent' : 'MEmoCHild')}>Change Name</button>
-            <h2>Count : {count}</h2>
-            <button onClick={()=>setCount(count+1)}>increase Count</button>
-            <button onClick={()=>setCount(count-1)}>decrease Count</button>
+            <MemoChild name={name}/>
+            <h2>From Parent</h2>
+            <button onClick={()=>setName(name === 'Parent'?'Child':'Parent')}>Change Name</button>
+            <h3>count : {count}</h3>
+            <button onClick={()=>setCount(count+1)}>Increase</button>
+            <button onClick={()=>setCount(count-1)}>Decrease</button>
         </div>
     )
 }
