@@ -1,9 +1,8 @@
-import ParentForward from "./ParentForward"
-
+import AxiosComponent from "./axios"
 const App = ()=>{
     return (
         <div>
-            <ParentForward/>
+            <AxiosComponent/>
         </div>
     )
 }
