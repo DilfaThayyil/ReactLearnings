@@ -1,9 +1,11 @@
 import React from 'react'
 
 function Memo({a}) {
-    console.log('from child')
   return (
-    <div>Memo</div>
+    <div>
+      <h2>React.memo</h2>
+      <h3>From child</h3>
+    </div>
   )
 }
 
