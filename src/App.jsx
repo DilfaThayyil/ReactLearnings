@@ -1,10 +1,9 @@
-import ParentComponent from "./ParentContextComponent";
-
+import MemoParent from "./MemoParent"
 
 function App(){
     return (
         <div>
-            <ParentComponent/>
+            <MemoParent/>
         </div>
     )
 }

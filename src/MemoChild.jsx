@@ -9,5 +9,5 @@ function Memo({a}) {
   )
 }
 
-const memmmo=React.memo(Memo)
-export default memmmo
+const Memmmo=React.memo(Memo)
+export default Memmmo

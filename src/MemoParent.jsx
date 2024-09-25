@@ -1,5 +1,5 @@
 import { useState } from "react";
-import memmmo from "./MemoChild";
+import Memmmo from "./MemoChild";
 
 const MemoParent = ()=>{
     const [count,setCount] = useState(0)
@@ -7,6 +7,7 @@ const MemoParent = ()=>{
 
     return (
         <div>
+            <Memmmo name={name}/>
             <h2>Parent Memo :{name}</h2>
             <button onClick={()=>setName(name==='MEmoCHild' ? 'MEmoPArent' : 'MEmoCHild')}>Change Name</button>
             <h2>Count : {count}</h2>
@@ -15,3 +16,5 @@ const MemoParent = ()=>{
         </div>
     )
 }
+
+export default MemoParent
