@@ -1,9 +1,9 @@
-import MemoParent from "./MemoParent";
+import ParentForward from "./ParentForward"
 
 const App = ()=>{
     return (
         <div>
-            <MemoParent/>
+            <ParentForward/>
         </div>
     )
 }
