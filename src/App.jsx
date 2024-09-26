@@ -1,8 +1,10 @@
-import AxiosComponent from "./axios"
+import Navigating from "./history"
+
+
 const App = ()=>{
     return (
         <div>
-            <AxiosComponent/>
+            <Navigating/>
         </div>
     )
 }
